@@ -1,33 +1,42 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+//translations
+import en from "./i18/en.json";
+import fr from "./i18/fr.json";
+const translations = {en, fr};
+
 function App() {
-  const [count, setCount] = useState(0)
+
+  //states
+  const [lang, setLang] = useState("en");
+
+  //language switching handler
+  const handleLangSwitch = () => {
+    const newLang = lang === "en" ? "fr" : "en";
+    setLang(newLang);
+    document.documentElement.lang = newLang;
+  }
+
+  //function to switch content on page language
+  const trans = (key) => {
+    return translations[lang][key] || key;
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="headerSection">
+        <div className="headerText">
+          <h1>TimeSaurus</h1>
+          <p>{trans("dashboardDesc")}</p>
+        </div>
+        <div className="headerButton">
+          <button onClick={handleLangSwitch}>
+            {lang === "en" ? "FR" : "EN"}
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }

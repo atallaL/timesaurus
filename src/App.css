@@ -1,42 +1,44 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.headerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.headerText {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerText h1{
+  margin: 0;
+  font-size: 3.3em;
+  color: var(--textcolor);
+  text-shadow: 2px 2px 2px var(--shadow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.headerText p{
+  margin: 0;
+  margin-top: 5px;
+  color: var(--subtextcolor);
+  font-size: 1.3em;
+  text-shadow: 2px 2px 3px var(--shadow);
 }
 
-.card {
-  padding: 2em;
+.headerSection button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.2em;
+  transform-origin: top right;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
-.read-the-docs {
-  color: #888;
+.headerSection button:hover{
+  transform: scale(1.03);
+}
+
+.headerSection button:focus {
+  outline: 1px solid red;
 }
