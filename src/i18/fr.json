@@ -4,5 +4,9 @@
     "linechartTitle": "Utilisation d'un seul mot vs. temps",
     "decade": "Décennie",
     "barchartXAxis": "Mots",
-    "barchartYAxis": "Utilisation de mots par million de mots"
+    "barchartYAxis": "Utilisation de mots par million de mots",
+    "linechartXAxis": "Plage de dix ans",
+    "linechartYAxis": "Word usage per million words",
+    "word": "Mot",
+    "wordc": "Mot:"
 }

@@ -50,18 +50,19 @@
   padding: 0 30px;
 }
 
-/* BAR GRAPH STUFF */
+/* GRAPH STUFF */
 
-.bargraphContainer{
+.bargraphContainer, .linegraphContainer{
   width: 100%;
   background-color: var(--sectioncolor);
   box-sizing: border-box;
   padding: 30px 20px;
+  margin-bottom: 50px;
   border-radius: 10px;
   box-shadow: 0px 3px 4px var(--secshadow);
 }
 
-.bargraphTop {
+.bargraphTop, .linegraphTop {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,22 +75,19 @@
   flex-direction: row;
 }
 
-.bargraphTop h2{
+.bargraphTop h2, .linegraphTop h2{
   text-align: center;
   margin: 0;
   font-size: 1.3em;
   font-weight: 800;
   text-shadow: 0px 2px 2px var(--shadow);
-  margin-right:20px;
 }
 
-.bargraphTop p{
+.bargraphTop p, .linegraphTop p{
   margin: 0;
   font-size: 0.9em;
-}
-
-.bargraphHelpHover p{
-   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
 .bargraphDropdown {
@@ -98,15 +96,14 @@
   margin-right: 20px;
 }
 
-.bargraphDropdown p{
+.bargraphDropdown p, .linegraphInput label{
+  font-family: var(--textfont);
   font-weight: 400;
   margin-right: 5px;
-  display:flex;
-  align-items:center;
   height: 25px;
 }
 
-.bargraphDropdown select {
+.bargraphDropdown select{
   height: 25px;
   font-size:0.8em;
   font-family: var(--textfont);
@@ -121,11 +118,12 @@
   font-weight: 300;
 }
 
-.barchart text{
+.barchart text, .linechart text{
   fill: var(--textcolor);
 }
 
-.barchart text.recharts-label{
+.recharts-label{
+  fill: var(--textcolor);
   font-weight: 700;
   font-size: 0.9em;
 }
@@ -133,7 +131,7 @@
 /* inputs at bottom */
 
 .bargraphInputs {
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 0 50px;
   display: flex;
   flex-direction: row;
@@ -154,7 +152,7 @@
   font-size: 0.9em;
 }
 
-.bargraphWordInput input {
+.bargraphWordInput input, .linegraphInput input {
   font-family: var(--textfont);
   font-weight: 400;
   font-size: 0.8em;
@@ -162,4 +160,106 @@
   border: 1px solid #767676;
   border-radius: 3px;
   height: 20px;
+}
+
+.linegraphInput label {
+  font-size: 0.9em;
+}
+
+.linegraphInput input {
+  font-weight: 300;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .bargraphTop, .linegraphTop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .bargraphTop h2, .linegraphTop h2{
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .bargraphContainer, .linegraphContainer{
+    padding: 20px 10px;
+  }
+
+  .graphContainer {
+    padding: 10px;
+  }
+
+  .bargraphInputs {
+    padding: 0 15px;
+  }
+
+  .bargraphDropdown p, .linegraphInput label{
+    font-size: 0.8em;
+    height: 20px;
+
+  }
+
+  .bargraphDropdown select{
+    height: 20px;
+    font-size:0.7em;
+  }
+
+  .bargraphDropdown option {
+    font-size:1em;
+  }
+
+  .linegraphInput label {
+    font-size: 0.8em;
+  }
+
+  .linegraphInput input {
+    font-size: 0.7em;
+    height: 18px;
+  }
+
+  .bargraphWordInput label {
+    font-size: 0.8em;
+  }
+
+  .bargraphWordInput input, .linegraphInput input {
+    font-size: 0.7em;
+    height: 18px;
+  }
+  .headerText h1{
+    font-size: 2.5em;
+  }
+
+  .headerText p{
+    font-size: 1em;
+  }
+
+  .headerSection button{
+    font-size: 1em;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .bargraphInputs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bargraphWordInput {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .recharts-label{
+    display: none;
+  }
+
+  .barchart text, .linechart text{
+    font-size: 0.7em
+  }
 }

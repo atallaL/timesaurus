@@ -4,5 +4,10 @@
     "linechartTitle": "Single Word Usage vs. Time",
     "decade": "Decade",
     "barchartXAxis": "Words",
-    "barchartYAxis": "Word usage per million words"
+    "barchartYAxis": "Word usage per million words",
+    "linechartXAxis": "Decade range",
+    "linechartYAxis": "Word usage per million words",
+    "word": "Word",
+    "wordc": "Word:"
+    
 }
