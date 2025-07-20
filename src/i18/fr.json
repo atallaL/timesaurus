@@ -6,7 +6,7 @@
     "barchartXAxis": "Mots",
     "barchartYAxis": "Utilisation de mots par million de mots",
     "linechartXAxis": "Plage de dix ans",
-    "linechartYAxis": "Word usage per million words",
+    "linechartYAxis": "Utilisation de mots par million de mots",
     "word": "Mot",
     "wordc": "Mot:"
 }
