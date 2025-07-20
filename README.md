@@ -1,1 +1,1 @@
-Dashboard website UX/UI design study and (high fidelity) prototype for SEG3125 (UOttawa design course) displaying word vs. time data in interactive charts. Developed using React.js.
+Dashboard website UX/UI design study and (high fidelity) prototype for SEG3125 (UOttawa design course) displaying word vs. time data in interactive charts. Developed using React.js and its Recharts library.
